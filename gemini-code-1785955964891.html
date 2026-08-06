@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação Designer de Sobrancelhas & Cílios - Studio Bianca Beauty</title>
+    <!-- Google Fonts Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --preto-puro: #0a0a0a;
+            --preto-soft: #141414;
+            --rosa-pink: #ff1493;
+            --rosa-pink-dark: #d80073;
+            --rose-gold: #e8a7b8;
+            --rose-light: #fff0f5;
+            --branco: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--preto-puro);
+            color: var(--branco);
+            line-height: 1.6;
+        }
+
+        /* BANNER TOPO DA PÁGINA */
+        .top-bar {
+            background: linear-gradient(90deg, var(--rosa-pink), var(--rose-gold), var(--rosa-pink));
+            color: var(--preto-puro);
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* HEADER HERO */
+        header {
+            background: radial-gradient(circle at top, #2a081a 0%, var(--preto-puro) 80%);
+            color: var(--branco);
+            text-align: center;
+            padding: 50px 20px 70px 20px;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 20, 147, 0.2);
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            letter-spacing: 6px;
+            color: var(--rose-gold);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--branco);
+            max-width: 900px;
+            margin: 0 auto 15px auto;
+            line-height: 1.3;
+        }
+
+        header h1 span {
+            color: var(--rosa-pink);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        header p.subtitulo {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--rose-light);
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* HERO MEDIA CONTAINER */
+        .hero-media {
+            max-width: 750px;
+            margin: -40px auto 40px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .media-box {
+            background: var(--preto-soft);
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.3);
+            border: 2px solid var(--rosa-pink);
+            overflow: hidden;
+        }
+
+        .media-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* CONTAINER SEÇÕES */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: var(--branco);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title span {
+            color: var(--rosa-pink);
+        }
+
+        .section-subtitle {
+            font-size: 15px;
+            color: var(--rose-gold);
+            margin-bottom: 40px;
+        }
+
+        /* HISTÓRIA BIANCA */
+        .historia-card {
+            background: var(--preto-soft);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-left: 4px solid var(--rosa-pink);
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            border-top: 1px solid rgba(232, 167, 184, 0.1);
+        }
+
+        .historia-texto h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            color: var(--rose-gold);
+            margin-bottom: 15px;
+        }
+
+        .historia-texto p {
+            font-size: 15px;
+            color: var(--rose-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* MÓDULOS DO CURSO */
+        .grid-conteudo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card-modulo {
+            background: var(--preto-soft);
+            padding: 30px 20px;
+            border-radius: 16px;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 20, 147, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card-modulo:hover {
+            transform: translateY(-5deg);
+            border-color: var(--rosa-pink);
+        }
+
+        .card-modulo .numero {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--rosa-pink);
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .card-modulo h4 {
+            font-size: 18px;
+            color: var(--branco);
+            margin-bottom: 10px;
+        }
+
+        .card-modulo p {
+            font-size: 14px;
+            color: var(--rose-gold);
+            font-weight: 300;
+        }
+
+        /* BÔNUS */
+        .bonus-box {
+            background: linear-gradient(135deg, #1f0513 0%, var(--preto-soft) 100%);
+            border: 2px dashed var(--rosa-pink);
+            border-radius: 20px;
+            padding: 40px 20px;
+            margin: 40px 0;
+        }
+
+        .bonus-list {
+            list-style: none;
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .bonus-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--branco);
+            margin-bottom: 15px;
+            background: var(--preto-puro);
+            padding: 18px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(232, 167, 184, 0.15);
+        }
+
+        .bonus-item strong {
+            color: var(--rose-gold);
+        }
+
+        .bonus-icon {
+            font-size: 24px;
+        }
+
+        /* GARANTIA */
+        .garantia-box {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: var(--preto-soft);
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 700px;
+            margin: 40px auto;
+            border: 1px solid rgba(255, 20, 147, 0.3);
+            text-align: left;
+        }
+
+        .garantia-selo {
+            width: 90px;
+            height: 90px;
+            min-width: 90px;
+            border: 2px solid var(--rosa-pink);
+            background: rgba(255, 20, 147, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--rosa-pink);
+            text-align: center;
+            padding: 5px;
+        }
+
+        /* OFERTA E BOTÃO CTA */
+        .pricing-section {
+            background: linear-gradient(180deg, var(--preto-soft) 0%, #250416 100%);
+            color: var(--branco);
+            border-radius: 30px;
+            padding: 50px 20px;
+            text-align: center;
+            margin: 50px 0;
+            border: 2px solid var(--rosa-pink);
+            box-shadow: 0 0 40px rgba(255, 20, 147, 0.25);
+        }
+
+        .preco-de {
+            font-size: 16px;
+            color: #888;
+            text-decoration: line-through;
+            margin-bottom: 5px;
+        }
+
+        .preco-por {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--rose-gold);
+        }
+
+        .valor-gigante {
+            font-family: 'Cinzel', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--branco);
+            margin: 10px 0;
+            text-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+        }
+
+        .valor-gigante span {
+            font-size: 22px;
+            vertical-align: super;
+            color: var(--rosa-pink);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--rosa-pink) 0%, var(--rosa-pink-dark) 100%);
+            color: var(--branco);
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 22px 45px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.5);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.8);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 20, 147, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 20, 147, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 20, 147, 0); }
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--preto-puro);
+            color: #666;
+            font-size: 13px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            header h1 { font-size: 28px; }
+            .historia-card { flex-direction: column; text-align: center; }
+            .garantia-box { flex-direction: column; text-align: center; }
+            .valor-gigante { font-size: 42px; }
+            .cta-btn { font-size: 16px; padding: 18px 25px; width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tarja de Urgência -->
+    <div class="top-bar">
+        ⚡ OPORTUNIDADE EXCLUSIVA: VAGAS COM CERTIFICADO INCLUSO PARA ESTE MÊS
+    </div>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <div class="logo-text">Studio Bianca Beauty</div>
+        <h1>Conquiste sua Liberdade Financeira <span>do Zero</span> na Estética</h1>
+        <p class="subtitulo">Descubra a técnica passo a passo para dominar Design de Sobrancelhas e Cílios mesmo sem ter 'dom' ou muito dinheiro para investir.</p>
+    </header>
+
+    <!-- Mídia em Destaque -->
+    <div class="hero-media">
+        <div class="media-box">
+            <img src="arte-bianca.jpg" alt="Curso de Estética com Bianca Mourão">
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <!-- História da Bianca -->
+        <div class="section">
+            <div class="historia-card">
+                <div class="historia-texto">
+                    <h3>"Eu comecei exatamente onde você está hoje..."</h3>
+                    <p>Muitas pessoas olham o Studio Bianca Beauty hoje e acham que tudo começou fácil. Mas a verdade é que eu não tinha estrutura e nem milhares de reais para investir em cursos presenciais caros.</p>
+                    <p>Meu primeiro grande passo foi um treinamento online simples que estudei direto pelo celular. Foi ali que aprendi a base de tudo. Por isso, decidi indicar este mesmo método para quem quer começar a faturar de verdade na área que mais cresce no Brasil.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulos -->
+        <div class="section">
+            <h2 class="section-title">O Que Você Vai <span>Dominar</span></h2>
+            <p class="section-subtitle">Um passo a passo completo pensado para quem está começando do zero.</p>
+            
+            <div class="grid-conteudo">
+                <div class="card-modulo">
+                    <span class="numero">MÓDULO 01</span>
+                    <h4>Biossegurança & Visagismo</h4>
+                    <p>Aprenda a mapear o rosto perfeito para cada cliente e dominar a higienização de ferramentas.</p>
+                </div>
+                
+                <div class="card-modulo">
+                    <span class="numero">MÓDULO 02</span>
+                    <h4>Design & Aplicação de Henna</h4>
+                    <p>Alinhamento preciso, marcação com linha e aplicação de henna sem manchas ou falhas.</p>
+                </div>
+
+                <div class="card-modulo">
+                    <span class="numero">MÓDULO 03</span>
+                    <h4>Extensão de Cílios Prática</h4>
+                    <p>Isolamento perfeito, acoplagem rápida e retenção de cílios de alta durabilidade.</p>
+                </div>
+
+                <div class="card-modulo">
+                    <span class="numero">MÓDULO 04</span>
+                    <h4>Captação & Agenda Cheia</h4>
+                    <p>Como divulgar seu trabalho no Instagram, precificar seus serviços e ter clientes fiéis toda semana.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bônus Exclusivos -->
+        <div class="section">
+            <h2 class="section-title">Presentes Exclusivos <span>Inclusos</span></h2>
+            <div class="bonus-box">
+                <ul class="bonus-list">
+                    <li class="bonus-item">
+                        <span class="bonus-icon">🎓</span>
+                        <span><strong>Certificado de Conclusão Oficial:</strong> Válido em todo o Brasil para você expor no seu Studio.</span>
+                    </li>
+                    <li class="bonus-item">
+                        <span class="bonus-icon">📘</span>
+                        <span><strong>E-book Guia de Precificação:</strong> Saiba exatamente quanto cobrar para ter a maior margem de lucro.</span>
+                    </li>
+                    <li class="bonus-item">
+                        <span class="bonus-icon">♾️</span>
+                        <span><strong>Acesso Vitalício:</strong> Assista e reassista às aulas quantas vezes quiser, no seu próprio ritmo.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Garantia Incondicional -->
+        <div class="garantia-box">
+            <div class="garantia-selo">
+                7 DIAS DE GARANTIA
+            </div>
+            <div>
+                <h4 style="font-size: 18px; color: var(--branco); margin-bottom: 5px;">Risco Zero para Você!</h4>
+                <p style="font-size: 14px; color: var(--rose-gold); font-weight: 300;">Experimente o curso por 7 dias. Se você achar que o conteúdo não é para você, basta solicitar o reembolso que devolvemos 100% do seu dinheiro sem burocracia.</p>
+            </div>
+        </div>
+
+        <!-- Bloco de Preço & Oferta -->
+        <div class="pricing-section">
+            <div class="preco-por">Por Apenas</div>
+            <div class="valor-gigante"><span>R$</span>97<span>,90</span></div>
+            <p style="font-size: 14px; color: var(--rose-gold);">ou em até 12x no cartão de crédito</p>
+
+            <!-- COLE O SEU LINK DE AFILIADA DA HOTMART NO HREF ABAIXO -->
+            <a href="https://pay.hotmart.com/seu-link-de-checkout" target="_blank" class="cta-btn">
+                Quero Garantir Minha Vaga Agora!
+            </a>
+            
+            <p style="font-size: 12px; color: #888; margin-top: 15px;">🔒 Pagamento 100% Seguro via Hotmart</p>
+        </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2026 Studio Bianca Beauty | Todos os direitos reservados</p>
+        <p style="font-size: 11px; margin-top: 5px; color: #444;">Este site não faz parte do Facebook ou Meta Inc. Os resultados podem variar de pessoa para pessoa.</p>
+    </footer>
+
+</body>
+</html>
