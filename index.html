@@ -89,7 +89,7 @@
             margin: 0 auto 30px auto;
         }
 
-        /* HERO MEDIA CONTAINER */
+        /* HERO MEDIA CONTAINER (VÍDEO) */
         .hero-media {
             max-width: 750px;
             margin: -40px auto 40px auto;
@@ -105,13 +105,19 @@
             box-shadow: 0 0 30px rgba(255, 20, 147, 0.3);
             border: 2px solid var(--rosa-pink);
             overflow: hidden;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
         }
 
-        .media-box img {
+        .media-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
+            height: 100%;
+            border: 0;
             border-radius: 12px;
-            display: block;
         }
 
         /* CONTAINER SEÇÕES */
@@ -392,10 +398,16 @@
         <p class="subtitulo">Descubra a técnica passo a passo para dominar Design de Sobrancelhas e Cílios mesmo sem ter 'dom' ou muito dinheiro para investir.</p>
     </header>
 
-    <!-- Mídia em Destaque -->
+    <!-- Mídia em Destaque (VÍDEO DO YOUTUBE) -->
     <div class="hero-media">
         <div class="media-box">
-            <img src="arte-bianca.jpg" alt="Curso de Estética com Bianca Mourão">
+            <!-- Substitua SEU_ID_DO_YOUTUBE_AQUI pelo ID do vídeo do canal do Studio -->
+            <iframe 
+                src="https://www.youtube.com/embed/SEU_ID_DO_YOUTUBE_AQUI?rel=0&modestbranding=1" 
+                title="Vídeo de Apresentação Studio Bianca Beauty" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 
@@ -482,7 +494,7 @@
             <div class="valor-gigante"><span>R$</span>97<span>,90</span></div>
             <p style="font-size: 14px; color: var(--rose-gold);">ou em até 12x no cartão de crédito</p>
 
-            <!-- COLE O SEU LINK DE AFILIADA DA HOTMART NO HREF ABAIXO -->
+            <!-- COLE O SEU LINK DE CHECKOUT DA HOTMART NO HREF ABAIXO -->
             <a href="https://pay.hotmart.com/seu-link-de-checkout" target="_blank" class="cta-btn">
                 Quero Garantir Minha Vaga Agora!
             </a>
