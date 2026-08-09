@@ -50,8 +50,7 @@
             background: radial-gradient(circle at top, #2a081a 0%, var(--preto-puro) 80%);
             color: var(--branco);
             text-align: center;
-            padding: 50px 20px 70px 20px;
-            position: relative;
+            padding: 50px 20px 30px 20px;
             border-bottom: 1px solid rgba(255, 20, 147, 0.2);
         }
 
@@ -89,55 +88,6 @@
             margin: 0 auto 30px auto;
         }
 
-     /* VÍDEO NO FLUXO NORMAL */
-.video-container {
-    max-width: 750px;
-    margin: 30px auto;
-    padding: 0 15px;
-}
-
-.video-responsive {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 16px;
-    border: 2px solid var(--rosa-pink);
-    box-shadow: 0 0 25px rgba(255, 20, 147, 0.3);
-    background-color: var(--preto-soft);
-}
-
-.video-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-        .media-box {
-            background: var(--preto-soft);
-            border-radius: 20px;
-            padding: 10px;
-            box-shadow: 0 0 30px rgba(255, 20, 147, 0.3);
-            border: 2px solid var(--rosa-pink);
-            overflow: hidden;
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-        }
-
-        .media-box iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            border-radius: 12px;
-        }
-
         /* CONTAINER SEÇÕES */
         .container {
             max-width: 900px;
@@ -145,8 +95,35 @@
             padding: 0 20px;
         }
 
+        /* VÍDEO COMPATÍVEL E EM FLUXO NORMAL */
+        .video-wrapper {
+            max-width: 750px;
+            margin: 30px auto 50px auto;
+            padding: 0;
+        }
+
+        .video-box {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 2px solid var(--rosa-pink);
+            box-shadow: 0 0 25px rgba(255, 20, 147, 0.3);
+            background-color: var(--preto-soft);
+        }
+
+        .video-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         .section {
-            padding: 60px 0;
+            padding: 40px 0;
             text-align: center;
         }
 
@@ -325,13 +302,6 @@
             box-shadow: 0 0 40px rgba(255, 20, 147, 0.25);
         }
 
-        .preco-de {
-            font-size: 16px;
-            color: #888;
-            text-decoration: line-through;
-            margin-bottom: 5px;
-        }
-
         .preco-por {
             font-size: 15px;
             text-transform: uppercase;
@@ -416,20 +386,20 @@
         <p class="subtitulo">Descubra a técnica passo a passo para dominar Design de Sobrancelhas e Cílios mesmo sem ter 'dom' ou muito dinheiro para investir.</p>
     </header>
 
-    <!-- Vídeo de Apresentação -->
-<div class="video-container">
-    <div class="video-responsive">
-        <iframe 
-            src="https://www.youtube-nocookie.com/embed/a8K1liAyLlM?rel=0&modestbranding=1" 
-            title="Vídeo de Apresentação Studio Bianca Beauty" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
-
     <div class="container">
         
+        <!-- Vídeo de Apresentação (FLUXO NORMAL DA PÁGINA) -->
+        <div class="video-wrapper">
+            <div class="video-box">
+                <iframe 
+                    src="https://www.youtube-nocookie.com/embed/a8K1liAyLlM?rel=0&modestbranding=1" 
+                    title="Vídeo de Apresentação Studio Bianca Beauty" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
         <!-- História da Bianca -->
         <div class="section">
             <div class="historia-card">
@@ -507,10 +477,10 @@
 
         <!-- Bloco de Preço & Oferta -->
         <div class="pricing-section">
-    <div class="preco-por">Por Apenas</div>
-    <div class="valor-gigante"><span>R$</span>297<span>,00</span></div>
-    <p style="font-size: 14px; color: var(--rose-gold);">ou em até 12x no cartão de crédito</p>
-            <!-- COLE O SEU LINK DE CHECKOUT DA HOTMART NO HREF ABAIXO -->
+            <div class="preco-por">Por Apenas</div>
+            <div class="valor-gigante"><span>R$</span>297<span>,00</span></div>
+            <p style="font-size: 14px; color: var(--rose-gold);">ou em até 12x no cartão de crédito</p>
+
             <a href="https://pay.hotmart.com/seu-link-de-checkout" target="_blank" class="cta-btn">
                 Quero Garantir Minha Vaga Agora!
             </a>
