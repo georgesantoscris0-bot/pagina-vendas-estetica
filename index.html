@@ -102,16 +102,18 @@
             padding: 0;
         }
 
-        .video-box {
-            position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 16px;
-            border: 2px solid var(--rosa-pink);
-            box-shadow: 0 0 25px rgba(255, 20, 147, 0.3);
-            background-color: var(--preto-soft);
-        }
+.video-box {
+    position: relative;
+    padding-bottom: 177.78%; /* Proporção 9:16 perfeita para Reels/Shorts */
+    max-width: 380px; /* Limita a largura para não ocupar a tela toda no PC */
+    margin: 0 auto;
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px solid var(--rosa-pink);
+    box-shadow: 0 0 25px rgba(255, 20, 147, 0.3);
+    background-color: var(--preto-soft);
+}
 
         .video-box iframe {
             position: absolute;
